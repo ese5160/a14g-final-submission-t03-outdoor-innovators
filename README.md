@@ -25,17 +25,26 @@ Final Project:
 ![alt text](Light_3.jpg)
 The standalone PCBA, top：
 ![alt text](PCB_top.jpg)
+
 The standalone PCBA, bottom：
 ![alt text](PCB_bottom.jpg)
+
 Thermal camera images：
 ![alt text](<Thermal Image under load.jpeg>)
+
 The Altium Board design in 2D view：
 ![alt text](Board_2D.png)
+
 The Altium Board design in 3D view：
 ![alt text](Board_3D.png)
+
 Node-RED dashboard：
 ![alt text](Dashboard.png)
+
 Node-RED backend：
-![alt text](Backend1.png) ![alt text](backend2.png) ![alt text](backend3.png)
+![alt text](Backend1.png) 
+![alt text](backend2.png) 
+![alt text](backend3.png)
+
 Block diagram of your system：
 ![alt text](BlockDiagram.png)
