@@ -14,6 +14,7 @@ https://drive.google.com/file/d/1mBNG53yQCwf-wDcMPQ2UYusR2cHMgMRF/view?usp=shari
 
 ## 3. Hardware & Software Requirements
 Hardware requirements:
+
 HRS 01 - Microcontroller Core : The project shall be centered around the SAM W25 microcontroller, which provides Wi-Fi connectivity and robust data processing capabilities for handling sensor inputs and controlling output devices. Connection: SPI/I2C/UART, Voltage: 3.3V
 
 As is shown in project photos, our customed PCBA use SAM W25 as our MCU. This requirement is met.
