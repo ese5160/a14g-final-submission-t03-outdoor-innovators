@@ -35,7 +35,6 @@ HRS 06 - Internet Connectivity：Leveraging the Wi-Fi capability of the SAM W25,
 Video:https://drive.google.com/file/d/1t3kiqObLjqx87QlHcKUHqHlMelwJ2aMp/view?usp=sharing
 This function has been demonstrated in the above video. In the video, when you put your hand on the temperature sensor, since the temperature of your hand is higher than the room temperature, the temperature detected by the temperature sensor rises, which corresponds to an increase in temperature in the CLI output and remote display, which proves that the device is connected to the internet and correctly updates the sensor data.
 
-
 ## 4. Project Photos & Screenshots
 
 Final Project:
