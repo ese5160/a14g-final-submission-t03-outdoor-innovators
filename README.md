@@ -30,6 +30,7 @@ SHTC3 sensor for temperature and humidity monitoring, providing SMS alerts if th
 BMP581 sensor for altitude and air pressure data, important for route planning and safety.
 
 PIR sensor for motion detection to alert against wildlife.
+
 VEML6030 ambient light sensor to automatically manage lighting based on ambient conditions.
 
 Light Strip for providing essential lighting, automatically adjusting to surrounding conditions.
