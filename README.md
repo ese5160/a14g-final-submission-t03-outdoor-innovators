@@ -95,6 +95,7 @@ Final PCBA link:  https://upenn-eselabs.365.altium.com/designs/33677AEA-E514-458
   * The SHTC3 sensor shall measure the temperature and humidity of the campsite. Accurate and real-time data from this sensor is critical for campers to prepare for changes in the environment and to ensure comfort. Connection: I2C, Voltage: 1.8-3.3V
 
   * **Verification**:This function has been demonstrated in Node-RED dashboard(Shown below). In Node-RED dashboard, the temperature and humidty value was shown correctly. The CLI output can also demonstrates the detected temperature and humidity value.
+  
 ![alt text](CLI_output.png)
 
 * **HRS 05 - Barometric Pressure and Altitude Measurement**
