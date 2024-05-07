@@ -15,12 +15,15 @@ https://drive.google.com/file/d/1mBNG53yQCwf-wDcMPQ2UYusR2cHMgMRF/view?usp=shari
 ## 3. Hardware & Software Requirements
 Hardware requirements:
 HRS 01 - Microcontroller Core : The project shall be centered around the SAM W25 microcontroller, which provides Wi-Fi connectivity and robust data processing capabilities for handling sensor inputs and controlling output devices. Connection: SPI/I2C/UART, Voltage: 3.3V
+
 As is shown in project photos, our customed PCBA use SAM W25 as our MCU. This requirement is met.
 
 HRS 02 - Proximity Detection : PIR motion sensor RE200B shall be used for detecting the proximity of individuals, triggering the buzzer. 
+
 This function has been demonstrated in the Video Presentation part. At 1:13 to 1:16 of the video, I demonstrate that the buzzer will make a sound when a hand is passed over the PIR sensor. It demonstartes that the above requirement is met.
 
 HRS 03 - Ambient Light Adjustment- The Ambient Light Sensor VEML6030 shall adjust the light intensity based on environmental light conditions to provide optimal visibility. Connection for RE200B: Digital I/O, Voltage: 3-6V; Connection for VEML6030: I2C, Voltage: 3.3V
+
 This function has been demonstrated in the Video Presentation part. At 1:20 to 1:35 of the video, I demonstrate that the light strip will be turned on when the finger covers the ambient light sensor VEML6030(Simulating dark environments). It demonstartes that the above requirement is met.
 
 HRS 04 - Environmental Monitoring : The SHTC3 sensor shall measure the temperature and humidity of the campsite. Accurate and real-time data from this sensor is critical for campers to prepare for changes in the environment and to ensure comfort. Connection: I2C, Voltage: 1.8-3.3V
