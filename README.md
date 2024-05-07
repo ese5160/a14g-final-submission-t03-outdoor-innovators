@@ -1,4 +1,5 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/kzkUPShx)
+
 # a14g-final-submission
 
     * Team Number: 03
@@ -8,6 +9,7 @@
     * Description of test hardware: (development boards, sensors, actuators, laptop + OS, etc) Customed PCBA, sensors,  actuators
 
 ## 1. Video Presentation
+
 https://drive.google.com/file/d/1mBNG53yQCwf-wDcMPQ2UYusR2cHMgMRF/view?usp=sharing
 
 ## 2. Project Summary
@@ -21,7 +23,7 @@ The Outdoor Assistant is an innovative device tailored for enhancing safety and 
 The inspiration for the Outdoor Assistant came from the challenges and risks associated with outdoor camping, such as sudden weather changes and potential wildlife encounters. Our aim was to create a smart, reliable companion that would provide peace of mind to campers through continuous monitoring and automated alerts, thereby making camping safer and more enjoyable.
 
 3. Device Functionality:
-![alt text](BlockDiagram.png)
+   ![alt text](BlockDiagram.png)
 
 The Outdoor Assistant is equipped with a series of sensors and actuators interconnected through a robust system architecture. Key components include:
 
@@ -58,20 +60,23 @@ The course ESE5160 provided a comprehensive understanding of embedded system des
 
 8. Project Links
 
-Link to your Node-RED instance:
+Link to your Node-RED instance:http://20.42.90.94:1880/
 
-Link to your A12G code repository:
+Link to your Node-Red ui: http://20.42.90.94:1880/ui/
+
+Link to your A12G code repository:https://github.com/ese5160/a12g-firmware-drivers-t03-outdoor-innovators/tree/main
 
 Final PCBA link:  https://upenn-eselabs.365.altium.com/designs/33677AEA-E514-458A-9677-44B08257B49A
 
 ## 3. Hardware & Software Requirements
+
 Hardware requirements:
 
 HRS 01 - Microcontroller Core : The project shall be centered around the SAM W25 microcontroller, which provides Wi-Fi connectivity and robust data processing capabilities for handling sensor inputs and controlling output devices. Connection: SPI/I2C/UART, Voltage: 3.3V
 
 As is shown in project photos, our customed PCBA use SAM W25 as our MCU. This requirement is met.
 
-HRS 02 - Proximity Detection : PIR motion sensor RE200B shall be used for detecting the proximity of individuals, triggering the buzzer. 
+HRS 02 - Proximity Detection : PIR motion sensor RE200B shall be used for detecting the proximity of individuals, triggering the buzzer.
 
 This function has been demonstrated in the Video Presentation part. At 1:13 to 1:16 of the video, I demonstrate that the buzzer will make a sound when a hand is passed over the PIR sensor. It demonstartes that the above requirement is met.
 
@@ -93,14 +98,48 @@ Video Link: https://drive.google.com/file/d/1t3kiqObLjqx87QlHcKUHqHlMelwJ2aMp/vi
 
 This function has been demonstrated in the above video. In the video, when you put your hand on the temperature sensor, since the temperature of your hand is higher than the room temperature, the temperature detected by the temperature sensor rises, which corresponds to an increase in temperature in the CLI output and remote display, which proves that the device is connected to the internet and correctly updates the sensor data.
 
+**Software Requirements**
+
+* **SRS 01 – Proximity-Activated Lighting**
+
+  * The software shall manage an IR sensor to detect the presence of individuals and activate the lighting system.
+  * The software shall modulate the light intensity based on ambient light sensor readings.
+  * **Implementation** : Utilize a PIR sensor for presence detection and emit an audible beep when proximity is detected. This function is achieved by modulating the input voltage level of the PIR sensor.
+* **SRS 02 – Environmental Monitoring**
+
+  * The software shall continuously measure and display real-time temperature and humidity levels, updating every 5 seconds +/- 1 second.
+  * The software shall issue alerts if temperature or humidity changes by more than 10% within a 10-minute window.
+  * **Implementation** : Implement environmental monitoring and display the data on Node-RED. Note: Due to challenges with FreeRTOS in achieving precise time intervals, a delay method is used to approximate updates every second.
+* **SRS 03 – Altitude Measurement**
+
+  * The software shall provide real-time altitude readings, updating the display every 10 seconds +/- 2 seconds using an altitude sensor.
+  * **Implementation** : Use the BMP sensor 581 for altitude data, which is relayed to Node-RED.
+* **SRS 04 – Voice Detection and Alarm System**
+
+  * The software shall analyze audio inputs for unusual sounds or potential animal noises and trigger an alarm within 1 second of detection.
+  * **Implementation** : Alerts are sent via text message upon detection of specific audio triggers. Utilizing Node-RED’s topic subscription and JavaScript, alarms are activated when the alert topic detects an event.
+* **SRS 05 – Internet Connectivity and Data Fetching**
+
+  * The software shall connect to the internet to fetch local weather conditions every 30 minutes +/- 5 minutes.
+  * The software shall display both current and upcoming weather conditions on an OLED screen.
+  * **Implementation** : Initially planned, this feature was omitted from the BOM and PCB design. Weather data can be accessed via the Node-RED web page.
+* **SRS 06 – Data Logging and Storage**
+
+  * The software shall log all captured data including temperature, humidity, altitude, and detected sounds.
+  * The software shall securely transmit and store data logs to AWS at predefined intervals of 1 hour +/- 5 minutes.
+  * The software shall ensure data integrity and confidentiality during transmission and storage using encryption standards.
+  * The software shall provide user access to download data in formats like CSV or JSON from AWS.
+  * **Implementation** : Data is logged under the appropriate Node-RED topic and can be visualized on the UI display over time.
+
+
 ## 4. Project Photos & Screenshots
 
 Final Project:
-![alt text](1.jpg) 
-![alt text](2.jpg) 
-![alt text](3.jpg) 
-![alt text](Light_1.jpg) 
-![alt text](Light_2.jpg) 
+![alt text](1.jpg)
+![alt text](2.jpg)
+![alt text](3.jpg)
+![alt text](Light_1.jpg)
+![alt text](Light_2.jpg)
 ![alt text](Light_3.jpg)
 The standalone PCBA, top：
 ![alt text](PCB_top.jpg)
@@ -110,7 +149,7 @@ The standalone PCBA, bottom：
 
 Thermal camera images：
 
-![alt text](<Thermal Image under load.jpeg>)
+![alt text](Thermal Image under load.jpeg)
 
 The Altium Board design in 2D view：
 
@@ -126,8 +165,8 @@ Node-RED dashboard：
 
 Node-RED backend：
 
-![alt text](Backend1.png) 
-![alt text](backend2.png) 
+![alt text](Backend1.png)
+![alt text](backend2.png)
 ![alt text](backend3.png)
 
 Block diagram of your system：
