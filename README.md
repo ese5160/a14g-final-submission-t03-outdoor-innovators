@@ -26,10 +26,14 @@ The inspiration for the Outdoor Assistant came from the challenges and risks ass
 The Outdoor Assistant is equipped with a series of sensors and actuators interconnected through a robust system architecture. Key components include:
 
 SHTC3 sensor for temperature and humidity monitoring, providing SMS alerts if thresholds are exceeded.
+
 BMP581 sensor for altitude and air pressure data, important for route planning and safety.
+
 PIR sensor for motion detection to alert against wildlife.
 VEML6030 ambient light sensor to automatically manage lighting based on ambient conditions.
+
 Light Strip for providing essential lighting, automatically adjusting to surrounding conditions.
+
 Buzzer to emit warning beeps when wildlife is detected, enhancing camper safety.
 
 These devices are coordinated through a FreeRTOS vTask system and visualized via a Node-RED interface for robust remote monitoring and control. Additionally, a WiFi module plays a crucial role by enabling the device to connect to the Internet. This connectivity allows for the uploading of environmental data such as temperature, humidity, and light levels to online platforms, ensuring that all information is easily accessible and that users can receive updates anywhere with Internet access.
