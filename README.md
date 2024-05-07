@@ -74,9 +74,9 @@ Final PCBA link:  https://upenn-eselabs.365.altium.com/designs/33677AEA-E514-458
 
 * **HRS 01 - Microcontroller Core**
 
- The project shall be centered around the SAM W25 microcontroller, which provides Wi-Fi connectivity and robust data processing capabilities for handling sensor inputs and controlling output devices. Connection: SPI/I2C/UART, Voltage: 3.3V
+ * The project shall be centered around the SAM W25 microcontroller, which provides Wi-Fi connectivity and robust data processing capabilities for handling sensor inputs and controlling output devices. Connection: SPI/I2C/UART, Voltage: 3.3V
 
- As is shown in project photos, our customed PCBA use SAM W25 as our MCU. This requirement is met.
+ * Verification: As is shown in project photos, our customed PCBA use SAM W25 as our MCU. This requirement is met.
 
 * **HRS 02 - Proximity Detection** 
 
