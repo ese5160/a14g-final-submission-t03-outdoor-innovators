@@ -70,7 +70,7 @@ Final PCBA link:  https://upenn-eselabs.365.altium.com/designs/33677AEA-E514-458
 
 ## 3. Hardware & Software Requirements
 
-Hardware requirements:
+**Hardware requirements**
 
 HRS 01 - Microcontroller Core : The project shall be centered around the SAM W25 microcontroller, which provides Wi-Fi connectivity and robust data processing capabilities for handling sensor inputs and controlling output devices. Connection: SPI/I2C/UART, Voltage: 3.3V
 
